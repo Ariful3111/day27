@@ -12,10 +12,10 @@ Widget ? widget;
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-
       color: isOutline==null? buttonColor: backgroundColor,
       height: size,
       minWidth: double.infinity,
+
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(28),
         side: BorderSide(

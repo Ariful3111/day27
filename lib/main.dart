@@ -1,5 +1,9 @@
 import 'package:day27/Bottom_Nav/Bottom_Nav_Home.dart';
 import 'package:day27/Onboarding/Spalash.dart';
+import 'package:day27/Screens/cached_network_image.dart';
+import 'package:day27/Screens/carousel.dart';
+import 'package:day27/Screens/shared_preferences.dart';
+import 'package:day27/User_Auth/Sign_Up.dart';
 import 'package:day27/Widgets/Fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: Splash(),
+      home: SignUP(),
     );
   }
 }
