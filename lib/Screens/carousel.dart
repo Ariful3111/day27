@@ -27,7 +27,6 @@ List <Widget>image=[
         children: [
           CarouselSlider(
             items: image,
-
             carouselController: buttonCarouselController,
             options: CarouselOptions(
               autoPlay: true,
@@ -35,14 +34,13 @@ List <Widget>image=[
               viewportFraction: 0.9,
               aspectRatio: 2.0,
               initialPage: 2,
-
             ),
           ),
           MaterialButton(
             onPressed: () => buttonCarouselController.nextPage(
                 duration: Duration(milliseconds: 300), curve: Curves.linear),
             child: Icon(Icons.slideshow,color: Colors.white,),
-          )
+          ),
         ],
       ),
     );

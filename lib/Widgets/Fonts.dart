@@ -11,6 +11,7 @@ myFonts(double size, [Color ? color, FontWeight ? fontweight]){
 
 const Color textColorLight= Color(0xffF8F8F8);
 const Color textColorDark=Color(0xffE9E9EB);
+const Color textColorDeep=Color(0xff8A8A8E);
 const Color cardColor=Color(0xff292B3E);
 const Color backgroundColor=Color(0xff191A22);
 const Color buttonColor=Color(0xff246BFD);

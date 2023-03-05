@@ -22,7 +22,7 @@ Widget ? widget;
           color: isOutline==null?buttonColor:textColorLight
         ),
       ),
-      onPressed: onTap,
+      onPressed:  onTap,
       child: widget,
     );
   }
