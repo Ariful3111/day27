@@ -18,7 +18,7 @@ class GlobalController extends GetxController{
       } else {
         currentIndex --;
       }
-      controller!.animateToPage(currentIndex,
+      pagecontroller.animateToPage(currentIndex,
           duration: Duration(seconds: 3), curve: Curves.easeIn);
     });
     super.onInit();
@@ -26,11 +26,11 @@ class GlobalController extends GetxController{
 
   @override
   void dispose() {
-    controller!.dispose();
+    pagecontroller.dispose();
     super.dispose();
   }
 }
-PageController ? controller;
+late PageController  pagecontroller;
 List OnboardingList=[
   'Update Progress\nYour Work for The\nTeam',
   'Create a Task and\nAssign it to Your\nTeam Members',

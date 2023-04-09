@@ -1,3 +1,4 @@
+import 'package:day27/Bottom_Nav/Bottom_Nav_Home.dart';
 import 'package:day27/User_Auth/Sign_Up.dart';
 import 'package:day27/Widgets/Button.dart';
 import 'package:day27/Widgets/Fonts.dart';
@@ -56,7 +57,7 @@ class RecoverPassword extends StatelessWidget {
               ),
               SizedBox(height: Get.height*0.02,),
               CustomeButton(
-                onTap: () {},
+                onTap: () {Get.to(BottomNavHome());},
                 size: Get.height * 0.08,
                 widget: Text(
                   'Continue',

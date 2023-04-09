@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 class Onboarding1 extends StatelessWidget {
 
  GlobalController ? onbordcontroller;
+ PageController pageController=PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +35,7 @@ class Onboarding1 extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 16,horizontal: 16),
             child: PageView.builder(
-              controller: controller,
+              controller: pageController,
               itemCount: OnboardingList.length,
               onPageChanged: (int i){
                 onbordcontroller!.onpagechange(i);

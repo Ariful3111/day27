@@ -8,8 +8,7 @@ import 'package:day27/Screens/Global%20Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BottomNavHome extends StatelessWidget {
-  Controller controller=Controller();
+class BottomNavHome extends StatefulWidget {
   static List _pages=[
     Home(),
     Add_Project(),
@@ -17,6 +16,14 @@ class BottomNavHome extends StatelessWidget {
     Profile(),
     Add(),
   ];
+
+  @override
+  State<BottomNavHome> createState() => _BottomNavHomeState();
+}
+
+class _BottomNavHomeState extends State<BottomNavHome> {
+  GlobalController controller=Get.put(GlobalController());
+
   List<TabItem> items = [
     TabItem(
       icon: Icons.home,
@@ -32,17 +39,18 @@ class BottomNavHome extends StatelessWidget {
     ),
     TabItem(
       icon: Icons.shopping_cart_outlined,
-
     ),
     TabItem(
       icon: Icons.search_sharp,
     ),
   ];
+
   int currentindex=0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[currentindex],
+      body: BottomNavHome._pages[currentindex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(right: 8,left: 8, bottom: 8),
         child: BottomBarCreative(
@@ -53,17 +61,19 @@ class BottomNavHome extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           indexSelected: currentindex,
           onTap: (int index){
-            controller.OnTap(index);
+            currentindex=index;
+            setState(() {
+              
+            });
           },
-        ),
+        )
       ),
     );
   }
 }
-
-class Controller extends GetxController{
-  OnTap(int index){
-    BottomNavHome().currentindex=index;
-    update();
-  }
-}
+// class Controller extends GetxController{
+//   OnTap(int index){
+//     BottomNavHome().currentindex=index;
+//     update();
+//   }
+// }
